@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Web Based Wallet
+Create a pneumonic, add multiple wallets and see the public key associated with each wallet.
 
-## Getting Started
+### Demo
 
-First, run the development server:
+https://github.com/user-attachments/assets/294f0fd6-74b7-48b6-90d2-965b89475a53
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Mnemonic Generation**: Generate a new mnemonic phrase using the BIP39 standard.
+- **Blockchain Selection**: Choose between supported blockchains, currently Solana and Ethereum.
+- **Wallet Creation**: Derive wallet addresses from the mnemonic for the selected blockchain.
+- **Show/Hide Mnemonic**: Toggle visibility of the generated mnemonic with an eye icon.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation
 
-## Learn More
+To run this project locally, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository**:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    git clone https://github.com/Pawank06/web-wallet.git
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. **Navigate to the project directory**:
 
-## Deploy on Vercel
+    ```bash
+    cd web-wallet
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Install dependencies**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```bash
+    npm install
+    ```
+
+4. **Run the development server**:
+
+    ```bash
+    npm run dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Usage
+
+1. **Generate Mnemonic**: Click the "Generate Mnemonic" button to create a new mnemonic phrase.
+2. **Select Blockchain**: Choose either Solana or Ethereum from the dropdown.
+3. **Add Wallet**: After selecting the blockchain, click "Add Wallet" to generate and add the wallet to the list.
+4. **View Balances**: The wallet addresses and their corresponding balances will be displayed below.
+
+## Technologies Used
+
+- **Next.js**: React framework for server-side rendering and static site generation.
+- **React**: JavaScript library for building user interfaces.
+- **bip39**: Library for mnemonic generation.
+- **ethers**: Ethereum library for interacting with the blockchain.
+- **@solana/web3.js**: Solana library for blockchain interactions.
+- **ed25519-hd-key**: Library for deriving keys using the ed25519 curve.
+- **nacl**: Library for cryptographic operations.
+
