@@ -96,7 +96,7 @@ const WalletComp = () => {
                 {
                     mnemonic && (
                         <div className='grid gap-3 mt-10'>
-                            <h1 className='text-4xl font-bold'>Select your blockchain</h1>
+                            <h1 className='text-3xl font-bold'>Select your blockchain</h1>
                             <Popover open={open} onOpenChange={setOpen}>
                                 <PopoverTrigger asChild>
                                     <Button
